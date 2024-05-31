@@ -1,13 +1,13 @@
-## About Me
+## me
 
-I am an MSc Computing and Information Systems student at Queen Mary University of London, with a strong background in computer science, programming, and software development. I have a diverse set of skills, including proficiency in Python, HTML, CSS, JavaScript, React, SQL, Figma, and Git. Additionally, I have the ability to quickly grasp new programming languages, frameworks, and technologies.
+I am an MSc Computing and Information Systems student at Queen Mary University of London expecting to graduate in September 2024. My interests include distributed systems, algorithms and finance.
 
-## Education
+## education
 
 - **MSc Computing and Information Systems (Software Systems stream)**, Queen Mary University of London (2023 - 2024 expected)
   - Courses: Computer Architecture and Networks, Computer Programming, Software Engineering, Database Systems, Interactive System Design, Data Analytics, Security and Authentication, Risk and Decision Making for Data Science and AI
 
-## Skills
+## skills
 
 - Programming Languages: Python, HTML, CSS, JavaScript, React, SQL
 - Web Development: HTML, CSS, JavaScript, React
@@ -16,7 +16,7 @@ I am an MSc Computing and Information Systems student at Queen Mary University o
 - Version Control: Git
 - Machine Learning: Decision Trees, K-Nearest Neighbors
 
-## Projects
+## projects
 
 ### User Interface Design and Prototyping
 - Design and prototype development of 'Thrive' - a mobile app to help autistic people build workplace skills through online courses, using Figma.
@@ -30,7 +30,7 @@ I am an MSc Computing and Information Systems student at Queen Mary University o
 ### Corporate Financial Risk Level Prediction
 - Predicted corporate financial risk levels using historical financial data with Decision Tree and K-Nearest Neighbors Classification algorithms.
 
-## Contact
+## contact
 
 - Email: [ibad.desmukh@gmail.com](mailto:ibad.desmukh@gmail.com)
 - GitHub: [github.com/idesmukh](https://github.com/idesmukh)
