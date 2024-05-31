@@ -1,1 +1,16 @@
-theme: minima
+title: "Ibad Desmukh's Personal Website"
+description: "A website about Ibad Desmukh" # Replace with a more specific description
+
+# Jekyll configuration
+baseurl: "" # Keep empty for project root URL
+url: "https://idesmukh.github.io" 
+
+# Theme configuration (replace with your chosen theme)
+theme: jekyll-theme-minimal
+
+# Plugins (optional)
+plugins: []
+
+# Collections (optional for managing content)
+collections: []
+
