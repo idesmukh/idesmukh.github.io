@@ -1,5 +1,3 @@
-# Ibad Deshmukh
-
 ## About Me
 
 I am an MSc Computing and Information Systems student at Queen Mary University of London, with a strong background in computer science, programming, and software development. I have a diverse set of skills, including proficiency in Python, HTML, CSS, JavaScript, React, SQL, Figma, and Git. Additionally, I have the ability to quickly grasp new programming languages, frameworks, and technologies.
