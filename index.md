@@ -4,11 +4,14 @@ title: me
 ---
 
 I am an MSc Computing and Information Systems student at Queen Mary University of London expecting to graduate in September 2024. My interests include distributed systems, algorithms and finance.
+- Email: [ibad.desmukh@gmail.com](mailto:ibad.desmukh@gmail.com)
+- GitHub: [github.com/idesmukh](https://github.com/idesmukh)
+- LinkedIn: [linkedin.com/in/idesmukh](https://linkedin.com/in/idesmukh)
 
 # education
 
 **MSc Computing and Information Systems (Software Systems stream)**  
-Queen Mary University of London (2023 - 2024 expected)  
+Queen Mary University of London (September 2023 - September 2024 expected)  
 
 Courses: Computer Architecture and Networks, Computer Programming, Software Engineering, Database Systems, Interactive System Design, Data Analytics, Security and Authentication, Risk and Decision Making for Data Science and AI
 
@@ -33,9 +36,3 @@ Design and implementation of a database for a college library using SQL.
 
 ## Corporate Financial Risk Level Prediction
 Predicted corporate financial risk levels using historical financial data with Decision Tree and K-Nearest Neighbors Classification algorithms.
-
-# contact
-
-- Email: [ibad.desmukh@gmail.com](mailto:ibad.desmukh@gmail.com)
-- GitHub: [github.com/idesmukh](https://github.com/idesmukh)
-- LinkedIn: [linkedin.com/in/idesmukh](https://linkedin.com/in/idesmukh)
