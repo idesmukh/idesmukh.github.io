@@ -6,7 +6,7 @@ baseurl: "" # Keep empty for project root URL
 url: "https://idesmukh.github.io" 
 
 # Theme configuration (replace with your chosen theme)
-theme: jekyll-theme-minimal
+theme: minima
 
 # Plugins (optional)
 plugins: []
