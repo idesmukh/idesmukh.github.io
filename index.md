@@ -3,8 +3,6 @@ layout: home
 title: Home
 ---
 
-# me
-
 I am an MSc Computing and Information Systems student at Queen Mary University of London expecting to graduate in September 2024. My interests include distributed systems, algorithms and finance.
 
 # education
