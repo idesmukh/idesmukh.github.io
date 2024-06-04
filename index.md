@@ -16,14 +16,6 @@ Queen Mary University of London (September 2023 - September 2024 expected)
 
 Courses: Computer Architecture and Networks, Computer Programming, Software Engineering, Database Systems, Interactive System Design, Data Analytics, Security and Authentication, Risk and Decision Making for Data Science and AI
 
-# skills
-
-- Programming Languages: Python, HTML, CSS, JavaScript, React, SQL
-- Web Development: HTML, CSS, JavaScript, React
-- Databases: SQL
-- Design Tools: Figma
-- Version Control: Git
-
 # projects
 
 ## User Interface Design and Prototyping
@@ -37,3 +29,8 @@ Design and implementation of a database for a college library using SQL.
 
 ## Corporate Financial Risk Level Prediction
 Predicted corporate financial risk levels using historical financial data with Decision Tree and K-Nearest Neighbors Classification algorithms.
+
+# writings
+
+### [Different ways to copy lists in Python](article-1.md)
+For those curious about Lists in Python, here are some interesting ideas I've come across while exploring alternative ways to copy lists.
