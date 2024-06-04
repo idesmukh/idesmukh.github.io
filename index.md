@@ -4,10 +4,10 @@ title: me
 ---
 
 I am an MSc Computing and Information Systems student at Queen Mary University of London expecting to graduate in September 2024. My interests include distributed systems, algorithms and finance.
-- Resume: [Resume](https://idesmukh.github.io/Ibad%20Desmukh.pdf)
-- Email: [ibad.desmukh@gmail.com](mailto:ibad.desmukh@gmail.com)
-- GitHub: [github.com/idesmukh](https://github.com/idesmukh)
-- LinkedIn: [linkedin.com/in/idesmukh](https://linkedin.com/in/idesmukh)
+- [Resume](https://idesmukh.github.io/Ibad%20Desmukh.pdf)
+- [Email](mailto:ibad.desmukh@gmail.com)
+- [GitHub](https://github.com/idesmukh)
+- [LinkedIn](https://linkedin.com/in/idesmukh)
 
 # education
 
