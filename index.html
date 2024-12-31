@@ -36,6 +36,49 @@
             font-family: Consolas, Monaco, "Courier New", monospace;
             font-size: 14px;
         }
+
+        .links {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .links span {
+            margin-right: 16px;
+        }
+        
+        .post-preview {
+            margin-bottom: 2em;
+        }
+
+        .post-title {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .post-title h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .post-title a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .post-title a:hover {
+            text-decoration: underline;
+        }
+
+        .post-date {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -44,29 +87,37 @@
         <p class="contact">
             <a href="mailto:ibaddesmukh@gmail.com">ibaddesmukh@gmail.com</a>
         </p>
-        <p class="contact">
-            code: <a href="https://github.com/idesmukh">github.com/idesmukh</a><br>
-            work: <a href="https://www.linkedin.com/in/idesmukh">linkedin.com/in/idesmukh</a><br>
-            read: <a href="https://goodreads.com/idesmukh">goodreads.com/idesmukh</a><br>
-            social: <a href="https://x.com/ibaddesmukh">x.com/ibaddesmukh</a>
+        <p class="links">
+            <span>code: <a href="https://github.com/idesmukh">github</a></span>
+            <span>work: <a href="https://www.linkedin.com/in/idesmukh">linkedin</a></span>
+            <span>read: <a href="https://goodreads.com/idesmukh">goodreads</a></span>
+            <span>social: <a href="https://x.com/ibaddesmukh">x</a></span>
         </p>
     </header>
 
     <h2>About</h2>
     <p>
-        Systems programmer focusing on low-level software development. Previously credit risk analyst with 9 years of experience. 
-        MSc Computing and Information Systems (Distinction) from Queen Mary University of London. Based in Liverpool, United Kingdom.
+        Systems programmer focusing on low-level software development. MSc Computing and Information Systems (Distinction) from Queen Mary University of London. Based in Liverpool, United Kingdom.
     </p>
     <p>
         Currently developing procedural thinking abilities through systems programming projects.
-        Interested in  distributed systems, computer architecture and algorithms.
+        Working with C#/.NET, network programming, thread management, and memory systems. Learning path includes daily algorithm implementation,
+        systems projects, debugging practice, and focused technical reading.
     </p>
+
+    <h2>Writing</h2>
+    <div class="post-preview">
+        <div class="post-title">
+            <h3><a href="python-list-copying.html">Python List Copying: References, Shallow Copies, and Deep Copies</a></h3>
+            <span class="post-date">December 2024</span>
+        </div>
+    </div>
 
     <h2>Projects</h2>
     
-    <h3>Memory Manager (In Progress)</h3>
+    <h3>Memory Manager Simulator (In Progress)</h3>
     <p>Custom memory allocation system implementation exploring memory management concepts.</p>
-    <pre>Technologies: C#, .NET</pre>
+    <pre>Technologies: C#, .NET, Memory Management</pre>
 
     <h3>Corporate Financial Risk Prediction Model</h3>
     <p>Developed classification models to predict risk levels based on historical credit ratings data. Implemented decision tree and k-nearest neighbours algorithms.</p>
@@ -81,35 +132,11 @@ Achievement: 93% accuracy with decision trees, 86% with KNN</pre>
     <p>Developed low-cost Bluetooth Low Energy based system for tracking soil and environmental conditions.</p>
     <pre>Technologies: C, Python, Bluetooth Low Energy</pre>
 
-    <h2>Technical Background</h2>
-    
-    <h3>Current Focus</h3>
-    <pre>
-- Systems Programming (C#, .NET)
-- Network Programming
-- Thread Management
-- Memory Systems</pre>
-
-    <h3>Previous Experience</h3>
-    <pre>
-- Credit Risk Modeling
-- Statistical Analysis
-- Financial Systems
-- Data Analysis (Python, SQL)</pre>
-
     <h2>Current Reading</h2>
     <ul>
         <li>The Coming Wave - Mustafa Suleyman</li>
         <li>The Rise and Fall of Athens - Plutarch</li>
     </ul>
-
-    <h2>Development Focus</h2>
-    <p>Currently following a structured program to develop procedural thinking abilities through:</p>
-    <pre>
-- Daily algorithm implementation practice
-- Systems programming projects
-- Deliberate debugging exercises
-- Focused technical reading</pre>
 
     <hr>
     <p style="text-align: center; font-size: 14px;">Last updated: December 2024</p>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python List Copying - Ibad Desmukh</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #000;
+            background: #fff;
+        }
+        
+        pre, code {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            background: #f8f8f8;
+            padding: 2px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 4px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 32px;
+            font-weight: normal;
+            color: #444;
+            letter-spacing: 0.3px;
+        }
+        
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        .post-date {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .back-link {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            margin-bottom: 2em;
+        }
+
+        article {
+            margin-top: 2em;
+        }
+
+        pre {
+            padding: 12px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .back-link a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="index.html">← back</a>
+    </div>
+
+    <article>
+        <h1>Python List Copying: References, Shallow Copies, and Deep Copies</h1>
+        <p class="post-date">December 2024</p>
+        
+        <p>For those curious about Lists in Python, here are some interesting ideas I've come across while exploring alternative ways to copy lists.</p>
+
+        <h2>Assignment Operator</h2>
+        <p>When a list is copied using the assignment operator (<code>a = b</code>), the copied list only contains a reference to the memory address of the original list object. Therefore, changing the original list changes the copied list as well.</p>
+
+        <h2>Shallow Copy using List Slicing</h2>
+        <p>A shallow copy can be created through list slicing:</p>
+        <pre>copy_list = orig_list[:]</pre>
+        <p>This creates a real copy of all top-level elements and saves them in a new memory address. Changes to top-level elements in the original list won't affect the copy. However, nested lists are still referenced, not copied. Hence "shallow" copy.</p>
+
+        <h2>Deep Copy using copy.deepcopy()</h2>
+        <p>For a true independent copy, including nested structures:</p>
+        <pre>copy_list = copy.deepcopy(orig_list)</pre>
+        <p>This iterates through all elements, including nested lists, creating real copies at new memory addresses. Hence "deep" copy.</p>
+    </article>
+</body>
+</html>
