@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Deep Dive into Recursive Isnteger Multiplication</title>
+<style>
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    p code {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    }
+    h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    }   
+</style>
+<!-- Add MathJax Support -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
+  }
+});
+</script>
+<style>
+/* Custom syntax highlighting to match the image */
+pre code {
+    background: #f5f5f5;
+    display: block;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+</style>
+</head>
+<body>
+<a href="../index.html">Back</a>
+<h1>A Deep Dive into Recursive Integer Multiplication</h1>
+<p>25 January 2024</p>
+<h2>Problem definition</h2>
+<p>Integer multiplication dates back to around 3,000 BCE, with the earliest multiplication algorithm developed by the Egyptians. Since then, there has been a lot of research on better approaches, which culminated in the discovery of the Karatsuba multiplication algorithm by Anatoly Karatsuba in 1960. Today, understanding the principles behind integer multiplication remains highly relevant, as the foundation of modern AI relies on millions of matrix multiplications.</p>
+<p>An alternate approach to grade school multiplication is recursive integer multiplication. We start by building the mathematical intuition behind this algorithm.</p>
+<p><em>Note: This algorithm is adapted from "Algorithms Illuminated" by Tim Roughgarden.</em></p>
+<h2>Mathematical foundation</h2>
+<p>We start by defining the inputs and outputs for this algorithm. The inputs are two numbers, $x$ and $y$. It is assumed that both, $x$ and $y$, are even numbers.</p>
+<p>The output is an integer, that is the product of $x$ and $y$.</p>
+<p>Lets define $n$ as the length of $x$ and $y$.</p>
+<p>The first step is to split $x$ and $y$ into two digits of length, $n/2$. A number can be expressed in terms of its higher order and lower order halve by:</p>
+<div style="margin: 1rem 0; font-size: 18px;">
+    $$\displaystyle x = 10^{n/2} \cdot a + b$$
+    $$\displaystyle y = 10^{n/2} \cdot c + d$$
+</div>
+<p>Since we want to calculate $x.y$:</p>
+<div style="margin: 1rem 0; font-size: 18px;">
+    $$x \cdot y = (10^{n/2} \cdot a + b) \cdot (10^{n/2} \cdot c + d)$$
+</div>
+<p>Using the distributive law, we arrive at:</p>
+<div style="margin: 1rem 0; font-size: 18px;">
+    $$x \cdot y = 10^n \cdot (a \cdot c) + 10^{n/2} \cdot (a \cdot d + b \cdot c) + b \cdot d$$
+</div>
+
+<p>
+    $10^n \cdot (a \cdot c)$: Contribution of the higher-order digits.<br>
+    $10^{n/2} \cdot (a \cdot d + b \cdot c)$: Cross terms between higher and lower-order digits.<br>
+    $b \cdot d$: Contribution of the lower-order digits.<br>
+</p>
+<h2>Algorithm description</h2>
+<p>The algorithm is developed as a recursive function. In general, a recursive algorithm has a base case and a recursive case.</p>
+<h3>Step 1: Define inputs, outputs and assumptions</h3>
+<p>
+    Input: Two even integers $x$ and $y$<br>
+    Output: The product of $x$ and $y$<br>
+    Assumption: The number of digits is a power of 2
+</p>
+<h3>Step 2: Define the base case</h3>
+<p>
+    If $x$ and $y$ are single digit numbers i.e. $n = 1$, we directly compute $x.y$ using grade school multiplication as $x.y$.
+</p>
+<h3>Step 3: Define the recursive case</h3>
+<p>
+    If $x$ and $y$ are larger than single digit numbers, they are split into their higher order and lower order halves, $a$, $b$, $c$ and $d$.
+</p>
+<p>
+    Now the required components are $a.c$, $a.d$, $b.c$ and $b.d$. These are recursively computed.
+</p>
+<p>
+    Lastly, all the components are brought together using grade school multiplication and addition.
+</p>
+<p> The pseudocode for the recursive integer multiplication is given as follows:</p>
+<pre><code class="plaintext">
+    Algorithm: rec-int-mult
+    Input: two n-digit positive integers x and y
+    Output: their product (x × y)
+    Assumption: n must be a power of 2
+    
+    // Base Case
+    if n equals 1 then
+        return x × y
+    // Recursive Case
+    else
+        // Calculate the higher order and lower order halves
+        a, b = first and second halves of x
+        c, d = first and second halves of y
+        
+        // Recursively multiply the components
+        ac = RecIntMult(a, c)
+        ad = RecIntMult(a, d)
+        bc = RecIntMult(b, c)
+        bd = RecIntMult(b, d)
+        
+        // Combine using grade school multiplication and addition
+        return 10^n × ac + 10^(n/2) × (ad + bc) + bd
+    </code></pre>
+<h2>Implementation</h2>
+The recursive integer multiplication algorithm is implemented in Python as follows:
+<pre><code class="python">
+import math
+
+
+def count_digits(number: int) -> int:
+    """Return the number of digits in the given number.
+
+    Args:
+        number: Integer to count digits for
+
+    Returns:
+        int: Number of digits in the input
+    """
+
+    if number == 0:
+        return 1
+
+    return math.floor(math.log10(abs(number))) + 1
+
+
+def rec_int_mult(x: int, y: int) -> int:
+    """Recursively multiply two positive integers using RecIntMult algorithm.
+
+    Args:
+        x: First positive integer to multiply
+        y: Second positive integer to multiply
+
+    Returns:
+        int: The product of x and y
+    """
+
+    if x < 10 and y < 10:
+        return x * y
+
+    digits_x = count_digits(x)
+    digits_y = count_digits(y)
+
+    n = max(digits_x, digits_y)
+
+    a = x // (10**(digits_x//2))
+    b = x % (10**(digits_x//2))
+    c = y // (10**(digits_y//2))
+    d = y % (10**(digits_y//2))
+
+    ac = rec-int-mult(a, c)
+    ad = rec-int-mult(a, d)
+    bc = rec-int-mult(b, c)
+    bd = rec-int-mult(b, d)
+
+    term_1 = 10**n * ac
+    term_2 = 10**(n // 2) * (ad + bc)
+    term_3 = bd
+
+    return term_1 + term_2 + term_3
+
+
+if __name__ == "__main__":
+    assert rec_int_mult(24, 36) == 24 * 36
+    print("All tests passed!")
+    </code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/pseudocode.min.js"></script>
+<script>hljs.highlightAll();</script>
+<footer style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+    <p style="color: #666; font-size: 0.9rem;">
+        Reference: Roughgarden, T. (2017) <i>Algorithms Illuminated, Part 1: The Basics</i>. Soundlikeyourself Publishing, LLC.
+    </p>
+</footer>
+</body>
+</html>
